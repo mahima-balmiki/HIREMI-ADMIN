@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#280305, #BD2930, #F13640);
+}
+
+.signin {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    width: 80%;
+    min-height: 80vh;
+    box-shadow: 0px 4px 13px 6px #00000040;
+    border-radius: 12px;
+    gap: 2.5em;
+}
+
+.signin img {
+    width: 170px;
+    height: auto;
+}
+
+.signin>p {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 18%;
+    gap: 2.5em;
+}
+
+form>p {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    height: 40px;
+    padding-left: 40px;
+}
+
+#id_username {
+    background-image: url(/static/dashboard/username_icon.svg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: left center;
+}
+
+#id_password {
+    background-image: url(/static/dashboard/password_icon.svg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: left center;
+}
+
+label {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.forgot {
+    text-decoration: none;
+    align-self: flex-end;
+    color: #ACACAC;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.signin button {
+    align-self: center;
+    width: 220px;
+    color: white;
+    border: none;
+    height: 45px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #BD232B 0%, #F13640 0.01%, #BD2930 100%);
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}

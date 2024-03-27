@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SigninPage</title>
+    <link rel="stylesheet" href="{% static 'dashboard/signin.css' %}">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+</head>
+<body>
+    <div class="signin">
+        <img src="{% static 'dashboard/hiremi_logo.jpeg' %}" alt="">
+        <p>Admin Login</p>
+        <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a class="forgot" href="#">Forgot Password?</a>
+        <button type="submit">Login</button>
+        </form>
+        <a href="
+        {% url 'dashboard' %}">Go to Dashboard(temporary)</a>
+    </div>
+</body>
+</html>

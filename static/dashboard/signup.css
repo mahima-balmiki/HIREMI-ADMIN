@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#280305, #BD2930, #F13640);
+}
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    width: 80%;
+    min-height: 80vh;
+}
+
+.signup img {
+    width: 170px;
+    height: auto;
+}
+
+.signup>p {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+form p {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+form label {
+    font-size: 14px;
+    font-weight: 600;
+}

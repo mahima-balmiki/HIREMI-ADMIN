@@ -1,0 +1,180 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'dashboard/dashboard.css' %}">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+</head>
+<body>
+    <nav>
+        <h1>Hiremi</h1>
+        <ul>
+            <li>
+                <a href="">
+                <img src="{% static 'dashboard/dashboard_nav_logo1.svg' %}" alt="">
+                <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="expandable">
+                <img src="{% static 'dashboard/dashboard_nav_logo2.svg' %}" alt="">
+                <label for="toggleJob"> Job list &nbsp; &nbsp; &nbsp;<img src="{% static 'dashboard/downarrow.svg' %}" alt=""></label>
+                <input type="checkbox" id="toggleJob">
+                <div>
+                    <a href="{% url 'internship' %}">Internship</a>
+                    <a href="{% url 'fresher' %}">Fresher</a>
+                    <a href="{% url 'experience' %}">Experiences</a>
+                </div>
+            </li>
+            <li>
+                <a href="{% url 'mentorship'%}">
+                <img src="{% static 'dashboard/dashboard_nav_logo3.svg' %}" alt="">
+                <span>Mentorship</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'training'%}">
+                <img src="{% static 'dashboard/dashboard_nav_logo4.svg' %}" alt="">
+                <span>Training</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'corporate' %}">
+                <img src="{% static 'dashboard/dashboard_nav_logo5.svg' %}" alt="">
+                <span>Corporate Training</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                <img src="{% static 'dashboard/dashboard_nav_logo6.svg' %}" alt="">
+                <span>Log Out</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="main">
+        <input class="searchbar" type="text" placeholder="Search">
+        <div class="dashboard_heading"><span></span>Account Status All <span></span></div>
+        <div class="tiles_container">
+            <div class="tile">
+                <div class="left_red"></div>
+                <label for="progress1">
+                    Total Account Created
+                </label>
+                <span class="red_text">532</span>
+                <progress id="progress1" value="532" max="600">532</progress>
+                <img src="{% static '/dashboard/barchart.svg' %}" alt="">
+            </div>
+            <div class="tile">
+                <div class="left_red"></div>
+                <label for="progress1">
+                    Account Under Verification
+                </label>
+                <span class="red_text">532</span>
+                <progress id="progress1" value="532" max="600">532</progress>
+                <img src="{% static '/dashboard/barchart.svg' %}" alt="">
+            </div>
+            <div class="tile">
+                <div class="left_red">
+
+                </div>
+                <label for="progress1">
+                    Total Account Verified
+                </label>
+                <span class="red_text">532</span>
+                <progress id="progress1" value="532" max="600">532</progress>
+                <img src="{% static '/dashboard/barchart.svg' %}" alt="">
+            </div>
+        </div>
+        <div class="chart"></div>
+        <!-- All JOB -->
+        <div class="dashboard_heading"><span></span>All Job <span></span></div>
+         <div class="tiles_container">
+            <div class="tile">
+                <div class="left_red"></div>
+                <label>Fresher Status</label> 
+                <span>
+                    <span class="red_text">532</span>
+                    <span>Applied</span>
+                </span>
+                <span>
+                    <span class="red_text">200</span>
+                    <span>Selected</span>
+                </span>
+                <img src="{% static '/dashboard/barchart.svg' %}" alt="">
+            </div>
+            <div class="tile">
+                <div class="left_red"></div>
+                <label>Experience Status</label> 
+                <span>
+                    <span class="red_text">532</span>
+                    <span>Applied</span>
+                </span>
+                <span>
+                    <span class="red_text">200</span>
+                    <span>Selected</span>
+                </span>
+                <img src="{% static '/dashboard/barchart.svg' %}" alt="">
+            </div>
+           <div class="tile">
+                <div class="left_red"></div>
+                <label>Internship Status</label> 
+                <span>
+                    <span class="red_text">532</span>
+                    <span>Applied</span>
+                </span>
+                <span>
+                    <span class="red_text">200</span>
+                    <span>Selected</span>
+                </span>
+                <img src="{% static '/dashboard/barchart.svg' %}" alt="">
+            </div>
+        </div>
+
+        <!-- Mentorship Status  -->
+        <div class="dashboard_heading"><span></span>Mentorship Status <span></span></div>
+        <div class="tiles_container">
+            <div class="tile">
+                <div class="left_red"></div>
+                <label>
+                    Total Applied
+                </label>
+                <span class="red_text">587</span>
+                <img src="{% static '/dashboard/barchart.svg' %}" alt="">
+            </div>
+        </div>
+
+        <!-- Training Status  -->
+        <div class="dashboard_heading"><span></span>Training Status <span></span></div>
+         <div class="tiles_container">
+            <div class="tile">
+                <div class="left_red"></div>
+                <label>Training</label> 
+                <span>
+                    <span class="red_text">532</span>
+                    <span>Applied</span>
+                </span>
+                <img src="{% static '/dashboard/barchart.svg' %}" alt="">
+            </div>
+            <div class="tile">
+                <div class="left_red"></div>
+                <label>Corporate Training</label> 
+                <span>
+                    <span class="red_text">532</span>
+                    <span>Applied</span>
+                </span>
+                <span>
+                    <span class="red_text">200</span>
+                    <span>Selected</span>
+                </span>
+                <img src="{% static '/dashboard/barchart.svg' %}" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
